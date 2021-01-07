@@ -15,4 +15,4 @@ workflows:
   send-notification:
     jobs:
       - notify:
-          context: slack-secrets
+          context: slack-secrets 
