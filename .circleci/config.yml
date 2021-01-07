@@ -6,22 +6,9 @@ jobs:
     docker:
       - image: 'cimg/base:stable'
     steps:
+      - run: echo 'export MY_ORB_TEMPLATE=$(cat /slack_template/tests_failed.json)' >> $BASH_ENV
       - slack/notify:
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "plain_text",
-                      "text": "*This is a text notification*",
-                      "emoji": true
-                    }
-                  ]
-                }
-              ]
-            }
+          template: MY_ORB_TEMPLATE
           event: always
 workflows:
   send-notification:
