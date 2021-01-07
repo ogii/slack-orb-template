@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: 'cimg/base:stable'
     steps:
+      - checkout
       - run: echo 'export MY_ORB_TEMPLATE=$(cat /slack_template/tests_failed.json)' >> $BASH_ENV
       - slack/notify:
           template: MY_ORB_TEMPLATE
