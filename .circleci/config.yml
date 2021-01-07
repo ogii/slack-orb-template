@@ -9,6 +9,7 @@ jobs:
       - checkout
       - run: echo 'export MY_ORB_TEMPLATE=$(cat /slack_template/tests_failed.json)' >> $BASH_ENV
       - run: ls -al
+      - run: pwd
       - slack/notify:
           template: MY_ORB_TEMPLATE
           event: always
