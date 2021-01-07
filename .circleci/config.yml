@@ -7,7 +7,7 @@ jobs:
       - image: 'cimg/base:stable'
     steps:
       - checkout
-      - run: echo 'export MY_ORB_TEMPLATE=$(cat project/slack_template/tests_failed.json)' >> $BASH_ENV
+      - run: echo 'export MY_ORB_TEMPLATE=$(cat /slack_template/tests_failed.json)' >> $BASH_ENV
       - run: ls -al
       - slack/notify:
           template: MY_ORB_TEMPLATE
