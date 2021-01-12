@@ -5,7 +5,7 @@
          "fields":[
             {
                "type":"plain_text",
-               "text":"This is the message loaded from a json file",
+               "text":"@aaron.clark This is the message loaded from a json file",
                "emoji":true
             }
          ]
