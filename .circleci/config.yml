@@ -21,6 +21,9 @@ jobs:
       - run:
           command: |
             exit 1
+      - run:
+          command: |
+            cat /tmp/SLACK_JOB_STATUS
       - slack/notify:
           channel: testing
           event: pass
