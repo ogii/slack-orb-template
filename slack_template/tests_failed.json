@@ -3,7 +3,7 @@
    "blocks":[
       {
          "type":"section",
-         "fields":[
+         "text":[
             {
                "type":"markdown",
                "text":"your build workflow is complete."
