@@ -1,15 +1,14 @@
 {
-   "text": "Text here for notifications",
+   "text": "Text here for desktop notification",
    "blocks":[
       {
          "type":"section",
          "fields":[
             {
-               "type":"plain_text",
-               "text":"<@aaron.clark> This is the message loaded from a json file",
-               "emoji":true
+               "type":"mrkdwn",
+               "text":"$SLACK_PARAM_MENTIONS -- your build workflow is complete."
             }
          ]
       }
    ]
- }
+}
