@@ -18,6 +18,9 @@ jobs:
           name: >-
             Store the content of the failure.json template into a custom
             environment variable
+      - run:
+          command: |
+            exit 1
       - slack/notify:
           channel: testing
           event: pass
