@@ -19,11 +19,11 @@ jobs:
             Store the content of the failure.json template into a custom
             environment variable
       - slack/notify:
-          channel: stack-consumer-releases
+          channel: testing
           event: pass
           template: MY_ORB_TEMPLATE_PASS
       - slack/notify:
-          channel: stack-consumer-releases
+          channel: testing
           event: fail
           template: MY_ORB_TEMPLATE_FAIL
 orbs:
