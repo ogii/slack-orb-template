@@ -5,7 +5,7 @@
          "type":"section",
          "fields":[
             {
-               "type":"mrkdwn",
+               "type":"plain_text",
                "text":"your build workflow is complete."
             }
          ]
