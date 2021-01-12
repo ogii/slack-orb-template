@@ -6,6 +6,14 @@
          "text":{
             "type":"mrkdwn",
             "text":"Danny Torrence left the following review for your property:"
+         },
+         "text":{
+            "type":"mrkdwn",
+            "text":"Danny Torrence left the following review for your property:"
+         },
+         "text":{
+            "type":"mrkdwn",
+            "text":"Danny Torrence left the following review for your property:"
          }
       }
    ]
