@@ -1,27 +1,14 @@
 {
-   "text":"Text here for notifications",
+   "text": "Text here for desktop notification",
    "blocks":[
       {
          "type":"section",
-         "text":{
-            "type":"mrkdwn",
-            "text":"Danny Torrence left the following review for your property:"
-         },
-         "text":{
-            "type":"mrkdwn",
-            "text":"Danny Torrence left the following review for your property:"
-         }
-      },
-      {
-         "type":"section",
-         "text":{
-            "type":"mrkdwn",
-            "text":"Danny Torrence left the following review for your property:"
-         },
-         "text":{
-            "type":"mrkdwn",
-            "text":"Danny Torrence left the following review for your property:"
-         }
+         "text":[
+            {
+               "type":"mrkdwn",
+               "text":"$SLACK_PARAM_MENTIONS -- your build workflow is complete."
+            }
+         ]
       }
    ]
 }
