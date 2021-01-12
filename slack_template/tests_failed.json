@@ -6,9 +6,9 @@
          "fields":[
             {
                "type":"mrkdwn",
-               "text":"$SLACK_PARAM_MENTIONS -- your build workflow is complete."
+               "text":"your build workflow is complete."
             }
          ]
       }
    ]
-}
+} 
