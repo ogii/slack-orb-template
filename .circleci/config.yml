@@ -1,4 +1,11 @@
 jobs:
+  job1:
+    docker:
+      - image: 'circleci/node:15.3.0-browsers'
+    steps:
+      - run:
+          command: |
+            exit 1
   notify:
     docker:
       - image: 'circleci/node:15.3.0-browsers'
@@ -20,10 +27,7 @@ jobs:
             environment variable
       - run:
           command: |
-            exit 1
-      - run:
-          command: |
-            cat /tmp/SLACK_JOB_STATUS
+            exit 0
       - slack/notify:
           channel: testing
           event: pass
@@ -38,5 +42,6 @@ version: '2.1'
 workflows:
   send-notification:
     jobs:
+      - job1
       - notify:
           context: slack-secrets
