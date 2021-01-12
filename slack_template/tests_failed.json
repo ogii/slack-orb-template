@@ -5,7 +5,7 @@
          "type":"section",
          "fields":[
             {
-               "type":"plain_text",
+               "type":"markdown",
                "text":"your build workflow is complete."
             }
          ]
