@@ -1,14 +1,12 @@
 {
-   "text": "Text here for desktop notification",
+   "text":"Text here for notifications",
    "blocks":[
       {
          "type":"section",
-         "text":[
-            {
-               "type":"markdown",
-               "text":"your build workflow is complete."
-            }
-         ]
+         "text":{
+            "type":"mrkdwn",
+            "text":"Danny Torrence left the following review for your property:"
+         }
       }
    ]
-} 
+}
