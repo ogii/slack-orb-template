@@ -1,16 +1,34 @@
-version: '2.1'
-orbs:
-  slack: circleci/slack@4.1
 jobs:
   notify:
     docker:
-      - image: 'cimg/base:stable'
+      - image: 'circleci/node:15.3.0-browsers'
     steps:
       - checkout
-      - run: echo 'export MY_ORB_TEMPLATE=$(cat ./slack_template/tests_failed.json)' >> $BASH_ENV
+      - run:
+          command: >-
+            echo 'export MY_ORB_TEMPLATE_PASS=$(cat
+            ./slack_template/tests_passed.json)' >> $BASH_ENV
+          name: >-
+            Store the content of the success.json template into a custom
+            environment variable
+      - run:
+          command: >-
+            echo 'export MY_ORB_TEMPLATE_FAIL=$(cat
+            ./slack_template/tests_failed.json)' >> $BASH_ENV
+          name: >-
+            Store the content of the failure.json template into a custom
+            environment variable
       - slack/notify:
-          template: MY_ORB_TEMPLATE
-          event: always
+          channel: stack-consumer-releases
+          event: pass
+          template: MY_ORB_TEMPLATE_PASS
+      - slack/notify:
+          channel: stack-consumer-releases
+          event: fail
+          template: MY_ORB_TEMPLATE_FAIL
+orbs:
+  slack: circleci/slack@4.1
+version: '2.1'
 workflows:
   send-notification:
     jobs:

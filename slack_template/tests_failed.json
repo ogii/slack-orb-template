@@ -5,7 +5,7 @@
          "type":"section",
          "text":{
             "type":"mrkdwn",
-            "text":"$SLACK_PARAM_MENTIONS -- your build workflow is complete."
+            "text":"failed tests!!"
          }
       }
    ]
