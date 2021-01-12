@@ -1,14 +1,12 @@
 {
-   "text": "Text here for desktop notification",
+   "text":"Text here for desktop notification",
    "blocks":[
       {
          "type":"section",
-         "text":[
-            {
-               "type":"mrkdwn",
-               "text":"$SLACK_PARAM_MENTIONS -- your build workflow is complete."
-            }
-         ]
+         "text":{
+            "type":"mrkdwn",
+            "text":"$SLACK_PARAM_MENTIONS -- your build workflow is complete."
+         }
       }
    ]
 }
