@@ -11,6 +11,7 @@ jobs:
       - slack/notify:
           template: MY_ORB_TEMPLATE
           event: always
+          mentions: 'aaron.clark'
 workflows:
   send-notification:
     jobs:
