@@ -1,3 +1,8 @@
+version: '2.1'
+
+orbs:
+  slack: circleci/slack@4.2.0
+
 jobs:
   job1:
     docker:
@@ -43,9 +48,7 @@ jobs:
           channel: $MY_SLACK_CHANNEL
           event: fail
           template: MY_ORB_TEMPLATE_FAIL
-orbs:
-  slack: circleci/slack@4.2.0
-version: '2.1'
+
 workflows:
   send-notification:
     jobs:
