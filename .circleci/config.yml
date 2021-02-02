@@ -6,7 +6,7 @@ orbs:
 jobs:
   job1:
     docker:
-      - image: 'circleci/node:15.3.0-browsers'
+      - image: 'circleci/node:15.3.0-browsers' 
     steps:
       - run:
           command: |
