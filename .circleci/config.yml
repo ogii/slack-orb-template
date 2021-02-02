@@ -38,11 +38,11 @@ jobs:
             Store the content of the failure.json template into a custom
             environment variable
       - slack/notify:
-          channel: $DEFAULT_SLACK_CHANNEL
+          channel: slacktest
           event: pass
           template: MY_ORB_TEMPLATE_PASS
       - slack/notify:
-          channel: $DEFAULT_SLACK_CHANNEL
+          channel: slacktest
           event: fail
           template: MY_ORB_TEMPLATE_FAIL
 
