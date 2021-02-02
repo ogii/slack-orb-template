@@ -36,11 +36,11 @@ jobs:
           command: >-
             echo 'export MY_SLACK_CHANNEL=testing' >> $BASH_ENV
       - slack/notify:
-          channel: $testing
+          channel: $MY_SLACK_CHANNEL
           event: pass
           template: MY_ORB_TEMPLATE_PASS
       - slack/notify:
-          channel: $testing
+          channel: $MY_SLACK_CHANNEL
           event: fail
           template: MY_ORB_TEMPLATE_FAIL
 orbs:
