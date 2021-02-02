@@ -33,14 +33,14 @@ jobs:
             Store the content of the failure.json template into a custom
             environment variable
       - run:
-          command: |
-            exit 0
+          command: >-
+            echo 'export MY_SLACK_CHANNEL=testing' >> $BASH_ENV
       - slack/notify:
-          channel: testing
+          channel: $testing
           event: pass
           template: MY_ORB_TEMPLATE_PASS
       - slack/notify:
-          channel: testing
+          channel: $testing
           event: fail
           template: MY_ORB_TEMPLATE_FAIL
 orbs:
