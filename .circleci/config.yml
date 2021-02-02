@@ -6,21 +6,21 @@ orbs:
 jobs:
   job1:
     docker:
-      - image: 'circleci/node:15.3.0-browsers'  
+      - image: 'cimg/base:2020.01'  
     steps:
       - run:
           command: |
             exit 1
   job2:
     docker:
-      - image: 'circleci/node:15.3.0-browsers' 
+      - image: 'cimg/base:2020.01' 
     steps:
       - run:
           command: |
             exit 0
   notify:
     docker:
-      - image: 'circleci/node:15.3.0-browsers'
+      - image: 'cimg/base:2020.01' 
     steps:
       - checkout
       - run:
