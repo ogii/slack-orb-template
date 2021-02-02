@@ -44,7 +44,7 @@ jobs:
           event: fail
           template: MY_ORB_TEMPLATE_FAIL
 orbs:
-  slack: circleci/slack@4.1
+  slack: circleci/slack@4.2.0
 version: '2.1'
 workflows:
   send-notification:
